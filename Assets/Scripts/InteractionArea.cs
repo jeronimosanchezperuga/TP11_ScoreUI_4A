@@ -19,5 +19,10 @@ public class InteractionArea : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {
         Debug.Log(col.gameObject.name);
+        if(col.gameObject.CompareTag("Pickable"))
+        {
+            Destroy(col.gameObject);
+        }
+        
     }
 }
